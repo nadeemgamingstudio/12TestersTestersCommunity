@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Child Safety & CSAM Policy — 12 Testers – Testers Community</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #00bfa6;
+      --accent-2: #6c5ce7;
+      --glass: rgba(255,255,255,0.03);
+      --maxwidth: 980px;
+      --radius: 14px;
+    }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    body{
+      background: linear-gradient(180deg, #071026 0%, #08102a 55%, #05111f 100%);
+      color: #E6EEF3;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px 16px;
+      box-sizing:border-box;
+    }
+    .container{
+      max-width: var(--maxwidth);
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      padding:28px 36px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-bottom: 1px solid rgba(255,255,255,0.02);
+    }
+    .logo {
+      width:84px;
+      height:84px;
+      border-radius:14px;
+      overflow:hidden;
+      flex:0 0 84px;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;
+      place-items:center;
+      box-shadow: 0 6px 18px rgba(12,14,30,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    .logo img{width:60px;height:60px;object-fit:contain;}
+    .hdr-text h1{margin:0;font-size:20px;letter-spacing:-0.2px}
+    .hdr-text p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    main{display:flex;gap:32px;padding:28px 36px}
+    .left{flex:1;min-width:280px}
+    .toc{flex-basis:320px;max-width:320px;background:var(--glass);padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.02);height:fit-content}
+    .toc h4{margin:0 0 12px 0;font-size:14px}
+    .toc ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .toc a{color:#bfece4;text-decoration:none;font-size:13px}
+    section.card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+      border-radius:12px;padding:20px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.02)
+    }
+    .kicker{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);font-weight:600;color:var(--accent);font-size:13px}
+    h2{margin:6px 0 12px 0;font-size:18px}
+    p{color:var(--muted);line-height:1.55}
+    ul{color:var(--muted);margin:8px 0 8px 18px}
+    code{background:rgba(255,255,255,0.02);padding:2px 6px;border-radius:6px;color:#cce7e0;font-weight:600}
+    .cta{display:flex;gap:12px;margin-top:14px}
+    .btn{
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#022027;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer;
+      box-shadow: 0 6px 18px rgba(12,14,30,0.6);
+      text-decoration:none;
+    }
+    footer{padding:20px 36px;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);font-size:13px}
+    .meta-list{display:grid;gap:6px}
+    .section-hero{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .feature{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+    .feature h3{margin:0;font-size:14px;color:#E8FFF9}
+    .feature p{margin:6px 0 0 0;font-size:13px;color:var(--muted)}
+    .alert {padding:12px;background:linear-gradient(90deg,#ff6b6b, #ff8c66);color:#051018;border-radius:10px;font-weight:700;margin-bottom:12px}
+    .report-list{display:grid;gap:8px;margin-top:8px}
+    .report-item{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.02)}
+    @media (max-width:900px){main{flex-direction:column}.toc{max-width:100%;flex-basis:auto}}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" alt="12 Testers – App Logo" />
+      </div>
+      <div class="hdr-text">
+        <h1>Child Safety & CSAM Policy — <strong>12 Testers – Testers Community</strong></h1>
+        <p>Developer: <strong>Nadeem Gaming Studio</strong> • Contact: <a href="mailto:nadeemgamer180@gmail.com" style="color:#BFECE4;text-decoration:none">nadeemgamer180@gmail.com</a></p>
+        <div style="margin-top:10px;font-size:13px;color:var(--muted)">Effective date: <strong id="effectiveDate">[Insert Date]</strong></div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Left: Content -->
+      <div class="left">
+
+        <section class="card section-hero" id="intro">
+          <div>
+            <span class="kicker">Safety First</span>
+            <h2>Overview</h2>
+            <p>
+              <strong>12 Testers – Testers Community</strong> is committed to maintaining a safe environment for everyone, and
+              we have a zero-tolerance policy for child sexual abuse material (CSAM), sexual exploitation of minors, or any content
+              that puts children at risk. This page explains our policy, detection and moderation practices, reporting process, and
+              the steps we take when we receive reports.
+            </p>
+
+            <div class="feature-grid" aria-hidden="true">
+              <div class="feature">
+                <h3>Zero Tolerance</h3>
+                <p>CSAM, sexual exploitation, or grooming content is strictly prohibited.</p>
+              </div>
+              <div class="feature">
+                <h3>Reporting</h3>
+                <p>Easy-report process and rapid response to lawful reports.</p>
+              </div>
+              <div class="feature">
+                <h3>Support</h3>
+                <p>We cooperate with law enforcement and child-protection agencies when required.</p>
+              </div>
+              <div class="feature">
+                <h3>Prevention</h3>
+                <p>Safe-by-design rules for uploads, messaging and content sharing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="policy-statement">
+          <h2>1. Our Policy Statement</h2>
+          <p>
+            We do not allow any content that sexualizes children, depicts minors in sexual contexts, or facilitates exploitation.
+            This includes images, video, audio, text, links, or any media that depicts sexual conduct involving persons under 18,
+            or content that meaningfully facilitates access to such material. Any user, developer or third party found to be sharing
+            or seeking CSAM will be banned and reported to appropriate authorities where required by law.
+          </p>
+        </section>
+
+        <section class="card" id="definitions">
+          <h2>2. Key Definitions</h2>
+          <ul>
+            <li><strong>Child / Minor:</strong> Any person under 18 years of age (definition may vary by local law; we default to this standard).</li>
+            <li><strong>CSAM:</strong> Child Sexual Abuse Material — any visual depiction of sexual content involving minors.</li>
+            <li><strong>Grooming:</strong> Behavior intended to build trust with a minor for sexual exploitation.</li>
+            <li><strong>Sexual content involving minors:</strong> Any explicit or suggestive depiction, text or link referencing sexual activity with minors.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="prohibited-content">
+          <h2>3. Prohibited Content & Actions</h2>
+          <p>Users and developers must not upload, post, share, embed, link to, or request any of the following:</p>
+          <ul>
+            <li>Images, videos, or audio depicting sexual activity involving minors.</li>
+            <li>Altered or generated content (including AI-generated) that sexualizes minors.</li>
+            <li>Advice, instructions, or facilitation for sexual contact with minors or evading law enforcement.</li>
+            <li>Solicitation, grooming, or attempts to exploit minors.</li>
+            <li>Links to websites or services that host CSAM or that facilitate distribution.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="upload-restrictions">
+          <h2>4. Upload & Listing Safety Rules</h2>
+          <p>Because Testers Community allows developers to upload icons, screenshots and links, we enforce the following rules:</p>
+          <ul>
+            <li>All uploaded media is scanned for known CSAM signatures and other violations using automated tools where available.</li>
+            <li>Developers must not include images or screenshots that show minors in sexualized contexts — app listings with such media will be removed immediately.</li>
+            <li>All links (Google Play testing links, group links) are inspected and may be blocked if they lead to unsafe content.</li>
+            <li>Developers must provide valid contact information and comply with moderation requests.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="detection-moderation">
+          <h2>5. Detection & Moderation</h2>
+          <p>We combine automated detection and human review to identify and quickly remove harmful content:</p>
+          <ul>
+            <li><strong>Automatic scanning:</strong> Uploaded images and videos are scanned against known illegal image hashes and heuristics.</li>
+            <li><strong>Human review:</strong> Trained moderators review flagged content to avoid false positives and evaluate context.</li>
+            <li><strong>Rate-limiting & flags:</strong> Repeated suspicious activity results in rate-limiting and temporary suspension pending review.</li>
+            <li><strong>Account checks:</strong> Accounts engaging in prohibited activity are suspended or disabled and relevant content removed.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="reporting">
+          <h2>6. How to Report Suspected CSAM or Child Exploitation</h2>
+          <p>If you see content or behavior that you believe depicts or facilitates sexual exploitation of minors, please report immediately. We take all reports seriously and will act to remove illegal material and to notify law enforcement where required.</p>
+
+          <div class="alert">Report immediately — We review urgent reports 24/7 and prioritize potential CSAM.</div>
+
+          <h3 style="margin-top:10px">Reporting options</h3>
+          <div class="report-list">
+            <div class="report-item">
+              <strong>In-app report:</strong> Use the report button available on each app listing or user profile. Select “Safety / Child Exploitation” when prompted.
+            </div>
+            <div class="report-item">
+              <strong>Email:</strong> Send details to <a href="mailto:nadeemgamer180@gmail.com" style="color:#BFECE4">nadeemgamer180@gmail.com</a>. Include the URL, username, timestamps, and any supporting screenshots (do NOT attach illegal images; describe them — see below).
+            </div>
+            <div class="report-item">
+              <strong>Emergency / Law enforcement:</strong> If someone is in immediate danger, contact local emergency services first, then notify us.
+            </div>
+          </div>
+
+          <p style="margin-top:10px"><em>Important: Do NOT share or forward suspected illegal images or videos. Instead, provide descriptions, timestamps, and links. If you must submit a file for review, contact us first and we will provide secure instructions. We will never ask you to distribute illegal imagery.</em></p>
+        </section>
+
+        <section class="card" id="investigation-actions">
+          <h2>7. What We Do After a Report</h2>
+          <p>When a valid report is received we follow a standard escalation procedure:</p>
+          <ul>
+            <li>Immediate removal or disabling of content that appears to violate this policy.</li>
+            <li>Temporary suspension of accounts pending investigation.</li>
+            <li>Preservation of forensic logs and metadata for lawful requests.</li>
+            <li>Notification to appropriate law enforcement or child-protection agencies where required by law or where serious risk is identified.</li>
+            <li>Permanent bans for accounts found to be distributing or intentionally facilitating CSAM or exploitation.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="cooperation">
+          <h2>8. Cooperation with Authorities</h2>
+          <p>We comply with applicable laws and cooperate with lawful requests from law enforcement and child-protection agencies. We maintain processes to respond to legal orders for user data and to preserve evidence when requested.</p>
+          <p>Where we are legally obliged to report or where safety concerns demand it, we will share relevant information (account metadata, IP addresses, timestamps) with authorities. We will comply with court orders and legal process.</p>
+        </section>
+
+        <section class="card" id="user-responsibility">
+          <h2>9. User Responsibilities</h2>
+          <p>All users must:</p>
+          <ul>
+            <li>Refrain from uploading or sharing any content involving minors in sexual contexts.</li>
+            <li>Report suspected abuse immediately.</li>
+            <li>Not attempt to investigate suspected exploitation on their own in a way that could endanger victims.</li>
+            <li>Follow all instructions from platform safety teams and law enforcement when cooperating with investigations.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="privacy-and-safety">
+          <h2>10. Privacy, Evidence & Data Retention</h2>
+          <p>To investigate reports we collect and may retain information related to the reported content and involved accounts: account metadata, upload timestamps, IP addresses, and other logs. We retain this data only as necessary for investigation, fraud prevention, legal compliance, or until a lawful request requires otherwise.</p>
+          <p>We are mindful of user privacy and follow a least-privilege approach — sharing data with third parties only when required for safety or by law.</p>
+        </section>
+
+        <section class="card" id="prevention-guidelines">
+          <h2>11. Prevention & Platform Design</h2>
+          <p>We design the platform to minimize risk:</p>
+          <ul>
+            <li>Strict upload filters and content moderation for listing images and media.</li>
+            <li>Rate limits and throttling on messaging and content submissions.</li>
+            <li>Verification and accountability for developers who publish listings.</li>
+            <li>Clear educational guidance for testers and developers about safe behavior and reporting.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="education-resources">
+          <h2>12. Guidance for Parents & Guardians</h2>
+          <p>If you are a parent or guardian, please take active steps to protect children using apps:</p>
+          <ul>
+            <li>Discuss safe online behavior and that they should never share intimate images or personal information.</li>
+            <li>Monitor app usage and the communities they engage with.</li>
+            <li>Use parental controls available on devices and app stores to restrict access.</li>
+            <li>Report any suspicious activity immediately using the methods above.</li>
+          </ul>
+        </section>
+
+        <section class="card" id="false-claims">
+          <h2>13. Handling False or Malicious Reports</h2>
+          <p>We encourage reporting of concerns. However, knowingly making false reports is harmful. Malicious reporting, abusive use of the reporting tools, or attempts to misuse safety processes may lead to account suspension or other action.</p>
+        </section>
+
+        <section class="card" id="changes">
+          <h2>14. Changes to This Policy</h2>
+          <p>We may update this policy to reflect changes in law, technology, or our practices. Significant changes will be communicated via in-app notices or updates to this page. Continued use after an update means you accept the revised policy.</p>
+        </section>
+
+        <section class="card" id="contact">
+          <h2>15. Contact & Immediate Reporting</h2>
+          <p>If you need to contact us about child safety, suspected CSAM, or urgent concerns — contact our safety team immediately:</p>
+          <div class="meta-list">
+            <div><strong>Email (Safety Reports):</strong> <a href="mailto:nadeemgamer180@gmail.com" style="color:#BFECE4">nadeemgamer180@gmail.com</a></div>
+            <div><strong>In-app report:</strong> Use the report button and choose “Safety / Child Exploitation”.</div>
+            <div><strong>For emergencies:</strong> Contact your local law enforcement first, then email us so we can assist.</div>
+          </div>
+          <div style="margin-top:14px">
+            <a class="btn" href="mailto:nadeemgamer180@gmail.com">Report Safety Issue</a>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right: Table of Contents -->
+      <aside class="toc" aria-label="Table of contents">
+        <h4>On this page</h4>
+        <ul>
+          <li><a href="#intro">Overview</a></li>
+          <li><a href="#policy-statement">Policy Statement</a></li>
+          <li><a href="#definitions">Definitions</a></li>
+          <li><a href="#prohibited-content">Prohibited Content</a></li>
+          <li><a href="#upload-restrictions">Upload Rules</a></li>
+          <li><a href="#detection-moderation">Detection & Moderation</a></li>
+          <li><a href="#reporting">Reporting</a></li>
+          <li><a href="#investigation-actions">Investigation Actions</a></li>
+          <li><a href="#cooperation">Cooperation</a></li>
+          <li><a href="#user-responsibility">User Responsibilities</a></li>
+          <li><a href="#privacy-and-safety">Privacy & Retention</a></li>
+          <li><a href="#prevention-guidelines">Prevention</a></li>
+          <li><a href="#education-resources">Parents</a></li>
+          <li><a href="#false-claims">False Reports</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <hr style="margin:12px 0;border-color:rgba(255,255,255,0.03)" />
+
+        <div style="font-size:13px;color:var(--muted)">
+          <strong>Quick safety notes</strong>
+          <p style="margin:8px 0 0">• Never share suspected illegal images. Describe and link instead.<br>• Emergency? Contact local authorities first.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" alt="logo" width="36" height="36" style="border-radius:8px;object-fit:contain">
+          <div>
+            <div style="font-weight:700">12 Testers – Testers Community</div>
+            <div style="color:var(--muted);font-size:13px">Nadeem Gaming Studio • <a href="mailto:nadeemgamer180@gmail.com" style="color:#BFECE4">nadeemgamer180@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div style="color:var(--muted);font-size:13px">© <span id="year"></span> Nadeem Gaming Studio • All rights reserved</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // set date & year automatically
+    document.getElementById('effectiveDate').textContent = new Date().toLocaleDateString();
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
