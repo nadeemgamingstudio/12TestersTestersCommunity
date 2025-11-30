@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>12 Testers – Testers Community — App Details</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #94a3b8;
+      --accent: #00bfa6;
+      --accent-2: #6c5ce7;
+      --glass: rgba(255,255,255,0.03);
+      --maxwidth: 1100px;
+      --radius: 14px;
+      --gap: 22px;
+    }
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+    body{
+      background: linear-gradient(180deg, #071026 0%, #08102a 55%, #05111f 100%);
+      color: #E6EEF3;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:32px 16px;
+      box-sizing:border-box;
+    }
+    .container{
+      max-width: var(--maxwidth);
+      margin: 0 auto;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius: var(--radius);
+      box-shadow: 0 12px 36px rgba(2,6,23,0.6);
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      padding:28px 36px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-bottom: 1px solid rgba(255,255,255,0.02);
+    }
+    .logo {
+      width:84px;
+      height:84px;
+      border-radius:14px;
+      overflow:hidden;
+      flex:0 0 84px;
+      background: linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:grid;
+      place-items:center;
+      box-shadow: 0 6px 18px rgba(12,14,30,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+    .logo img{width:60px;height:60px;object-fit:contain;}
+    .hdr-text h1{margin:0;font-size:20px;letter-spacing:-0.2px}
+    .hdr-text p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    main{display:flex;gap:var(--gap);padding:28px 36px}
+    .left{flex:1;min-width:320px}
+    .right{width:360px;flex:0 0 360px}
+    .card{background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));border-radius:12px;padding:18px;margin-bottom:18px;border:1px solid rgba(255,255,255,0.02)}
+    h2{margin:8px 0 12px 0;font-size:18px}
+    p{color:var(--muted);line-height:1.55}
+    ul{color:var(--muted);margin:8px 0 8px 18px}
+    .feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:12px}
+    .feature{background:rgba(255,255,255,0.02);padding:12px;border-radius:10px}
+    .feature h3{margin:0;font-size:14px;color:#E8FFF9}
+    .feature p{margin:6px 0 0 0;font-size:13px;color:var(--muted)}
+    .cta{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+    .btn{
+      background: linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#022027;padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer;
+      box-shadow: 0 6px 18px rgba(12,14,30,0.6);
+      text-decoration:none;
+    }
+    .muted{color:var(--muted)}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px}
+    .thumb{background:rgba(255,255,255,0.02);border-radius:8px;padding:6px;border:1px solid rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;min-height:80px;overflow:hidden}
+    .thumb img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+    .input-row{display:flex;gap:8px;margin-top:8px}
+    input[type="text"], textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#E6EEF3}
+    textarea{min-height:80px;resize:vertical}
+    label{font-size:13px;color:var(--muted);display:block;margin-bottom:6px}
+    .small{font-size:13px;color:var(--muted)}
+    .specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
+    .spec{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;text-align:center}
+    .spec h4{margin:0;font-size:14px}
+    .spec p{margin:6px 0 0 0;color:var(--muted);font-size:13px}
+    footer{padding:20px 36px;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);font-size:13px}
+    @media (max-width:980px){main{flex-direction:column}.right{width:auto;flex-basis:auto}}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo" aria-hidden="true">
+        <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" alt="12 Testers – App Logo" />
+      </div>
+      <div class="hdr-text">
+        <h1>12 Testers – Testers Community</h1>
+        <p>Developer: <strong>Nadeem Gaming Studio</strong> • Contact: <a href="mailto:nadeemgamer180@gmail.com" style="color:#BFECE4;text-decoration:none">nadeemgamer180@gmail.com</a></p>
+        <div style="margin-top:8px;font-size:13px;color:var(--muted)">All features — step-by-step guide & screenshots</div>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT: Details -->
+      <div class="left">
+        <section class="card">
+          <span class="small muted">OVERVIEW</span>
+          <h2>What is 12 Testers – Testers Community?</h2>
+          <p>
+            <strong>12 Testers – Testers Community</strong> is a simple, secure platform where developers publish apps for closed testing and
+            testers earn tokens by testing those apps. It is built to streamline Play Store closed testing: developers upload a test listing (icon, Play test link, Google Group),
+            spend tokens to get testers, and get real feedback. Testers follow the tasks (install → open → feedback → claim tokens).
+          </p>
+
+          <h3 style="margin-top:14px">Key benefits</h3>
+          <ul>
+            <li>Fast closed-testing flow that integrates with Play Store testing links and Google Groups</li>
+            <li>Token-based reward system to incentivize real testers</li>
+            <li>Automated tracking of task completion (open app, feedback, collect tokens)</li>
+            <li>Safety & moderation rules to avoid abuse</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <span class="small muted">FEATURES</span>
+          <h2>Features — Step by step</h2>
+
+          <div class="feature-grid">
+            <div class="feature">
+              <h3>Publish an app (Developer)</h3>
+              <p>Upload title, description, icon, Play closed-testing link and Google Group. Pay tokens to list your app for 24 hours to attract testers.</p>
+            </div>
+            <div class="feature">
+              <h3>Discover & Test (Tester)</h3>
+              <p>Browse home feed without login. To test or claim tokens you must log in. Follow the testing steps to earn tokens.</p>
+            </div>
+            <div class="feature">
+              <h3>Task Tracking</h3>
+              <p>Automatic step tracking: test-now → open app → submit feedback → collect tokens. Each step is recorded in Firestore for fairness.</p>
+            </div>
+            <div class="feature">
+              <h3>Token Economy</h3>
+              <p>Tokens are awarded on successful completion (e.g. +10 for download, +15 group join, +20 feedback, +25 rating — configurable).</p>
+            </div>
+            <div class="feature">
+              <h3>Notifications</h3>
+              <p>Developers receive push notifications when someone tests their app (you can enable this in your account).</p>
+            </div>
+            <div class="feature">
+              <h3>Safety & Moderation</h3>
+              <p>Uploads are moderated. Prohibited content is removed and accounts violating rules are blocked.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <span class="small muted">HOW IT WORKS</span>
+          <h2>Flow (Developer → Tester)</h2>
+          <ol>
+            <li><strong>Developer:</strong> Creates a listing (title, description, icon), adds closed-testing Play link + Google Group, pays tokens to publish for 24 hours.</li>
+            <li><strong>Home Feed:</strong> Listing appears on home feed for 24 hours; testers see it without login.</li>
+            <li><strong>Tester:</strong> Clicks Test Now → Play Store opens to install the test app; tester performs tasks (open app, give feedback, play).</li>
+            <li><strong>Verification:</strong> App records steps to Firestore (openedApp, gaveFeedback, rewarded) — each step is validated (Play store fallback if needed).</li>
+            <li><strong>Rewards:</strong> After completing tasks, tester taps Collect Tokens and receives tokens in their Firestore user doc (transaction-safe).</li>
+            <li><strong>Developer notification:</strong> When a tester completes, the developer receives a notification (push/cloud function trigger).</li>
+          </ol>
+          <p class="small muted">Note: Listings auto-delete after 24 hours to keep the feed fresh and promote fairness.</p>
+        </section>
+
+        <section class="card">
+          <span class="small muted">TOKENS & PAYMENTS</span>
+          <h2>Tokens explained</h2>
+          <p>
+            Tokens are the internal currency. Developers spend tokens to publish; testers earn tokens by completing tasks. Tokens are tracked
+            in your Firestore user document and updated with secure transactions to avoid race conditions and fraud.
+          </p>
+          <div class="specs" style="margin-top:12px">
+            <div class="spec"><h4>Earn</h4><p>Typical reward: 10–25 tokens per task</p></div>
+            <div class="spec"><h4>Cost</h4><p>Publish a listing: typical cost 100 tokens (configurable)</p></div>
+            <div class="spec"><h4>Secure</h4><p>Transactions & cloud functions ensure consistency</p></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <span class="small muted">FAQ</span>
+          <h2>Common questions</h2>
+          <dl style="margin-top:10px">
+            <dt style="font-weight:700">Do testers need to login?</dt>
+            <dd class="small muted">Yes — viewing listings is open, but to claim tokens testers must sign in.</dd>
+
+            <dt style="font-weight:700;margin-top:8px">How long is a listing visible?</dt>
+            <dd class="small muted">24 hours (auto-delete) — this helps freshness and equitable exposure.</dd>
+
+            <dt style="font-weight:700;margin-top:8px">Can I cancel a listing?</dt>
+            <dd class="small muted">Not from the UI yet; listings expire automatically. Contact support if immediate removal is needed.</dd>
+          </dl>
+        </section>
+      </div>
+
+      <!-- RIGHT: Media + Inputs -->
+      <aside class="right">
+        <section class="card">
+          <h2>Screenshots Gallery</h2>
+          <p class="small muted">Paste image URLs below (one per line) and click <strong>Preview</strong> to populate the gallery thumbnails.</p>
+
+          <label>Image URLs (one per line)</label>
+          <textarea id="imageUrls" placeholder="https://.../shot1.png&#10;https://.../shot2.png"></textarea>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" id="previewGallery">Preview</button>
+            <button class="btn" id="clearGallery" style="background:rgba(255,255,255,0.04);color:#BFECE4">Clear</button>
+          </div>
+
+          <div style="margin-top:12px">
+            <div id="gallery" class="gallery"></div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>YouTube / Demo Video</h2>
+          <p class="small muted">Paste a YouTube watch URL (e.g. https://www.youtube.com/watch?v=VIDEO_ID) and click Preview.</p>
+          <label>YouTube URL</label>
+          <input id="youtubeUrl" type="text" placeholder="https://www.youtube.com/watch?v=..." />
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" id="previewVideo">Preview</button>
+            <button class="btn" id="clearVideo" style="background:rgba(255,255,255,0.04);color:#BFECE4">Clear</button>
+          </div>
+          <div id="videoPreview" style="margin-top:12px"></div>
+        </section>
+
+        <section class="card">
+          <h2>Quick Specs</h2>
+          <div class="specs">
+            <div class="spec"><h4>Platform</h4><p>Android</p></div>
+            <div class="spec"><h4>Min SDK</h4><p>Configured in project</p></div>
+            <div class="spec"><h4>Version</h4><p>1.0.0</p></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <a class="btn" href="mailto:nadeemgamer180@gmail.com">Contact Developer</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Support & Safety</h2>
+          <p class="small muted">We moderate uploads and enforce safety rules. If you discover abuse, use the in-app report button or email <a href="mailto:nadeemgamer180@gmail.com" style="color:#BFECE4">nadeemgamer180@gmail.com</a>.</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://raw.githubusercontent.com/nadeemgamingstudio/Icons/refs/heads/main/12TestersTestersCommunity.png" alt="logo" width="36" height="36" style="border-radius:8px;object-fit:contain">
+          <div>
+            <div style="font-weight:700">12 Testers – Testers Community</div>
+            <div style="color:var(--muted);font-size:13px">Nadeem Gaming Studio • <a href="mailto:nadeemgamer180@gmail.com" style="color:#BFECE4">nadeemgamer180@gmail.com</a></div>
+          </div>
+        </div>
+
+        <div style="color:var(--muted);font-size:13px">© <span id="year"></span> Nadeem Gaming Studio — All Rights Reserved</div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Gallery preview logic
+    const previewBtn = document.getElementById('previewGallery');
+    const clearBtn = document.getElementById('clearGallery');
+    const galleryEl = document.getElementById('gallery');
+    previewBtn.addEventListener('click', () => {
+      const text = document.getElementById('imageUrls').value.trim();
+      galleryEl.innerHTML = '';
+      if (!text) return;
+      const lines = text.split(/\n+/).map(l => l.trim()).filter(Boolean);
+      lines.forEach(url => {
+        const div = document.createElement('div');
+        div.className = 'thumb';
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = 'screenshot';
+        img.onerror = () => { div.innerHTML = '<div class="small" style="color:var(--muted)">Invalid image URL</div>'; }
+        div.appendChild(img);
+        galleryEl.appendChild(div);
+      });
+    });
+    clearBtn.addEventListener('click', () => {
+      document.getElementById('imageUrls').value = '';
+      galleryEl.innerHTML = '';
+    });
+
+    // YouTube preview
+    const previewVideoBtn = document.getElementById('previewVideo');
+    const clearVideoBtn = document.getElementById('clearVideo');
+    const videoPreview = document.getElementById('videoPreview');
+    previewVideoBtn.addEventListener('click', () => {
+      const url = document.getElementById('youtubeUrl').value.trim();
+      videoPreview.innerHTML = '';
+      if (!url) return;
+      // extract video id (basic)
+      let id = null;
+      try {
+        const u = new URL(url);
+        if (u.hostname.includes('youtube.com')) {
+          id = u.searchParams.get('v');
+        } else if (u.hostname.includes('youtu.be')) {
+          id = u.pathname.slice(1);
+        }
+      } catch(e) {
+        // fallback regex
+        const m = url.match(/(?:v=|youtu\.be\/)([A-Za-z0-9_\-]+)/);
+        id = m ? m[1] : null;
+      }
+      if (!id) {
+        videoPreview.innerHTML = '<div class="small" style="color:var(--muted)">Could not parse YouTube URL</div>';
+        return;
+      }
+      const iframe = document.createElement('iframe');
+      iframe.width = '100%';
+      iframe.height = '200';
+      iframe.src = 'https://www.youtube.com/embed/' + id;
+      iframe.frameBorder = '0';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+      iframe.allowFullscreen = true;
+      videoPreview.appendChild(iframe);
+    });
+    clearVideoBtn.addEventListener('click', () => {
+      document.getElementById('youtubeUrl').value = '';
+      videoPreview.innerHTML = '';
+    });
+  </script>
+</body>
+</html>
